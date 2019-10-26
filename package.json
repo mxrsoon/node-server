@@ -1,5 +1,5 @@
 {
-  "name": "w-server",
+  "name": "wserver",
   "version": "0.1.2",
   "description": "",
   "main": "index.js",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wazybr/w-server.git"
+    "url": "git+https://github.com/wazybr/wserver.git"
   },
   "author": "wazybr",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wazybr/w-server/issues"
+    "url": "https://github.com/wazybr/wserver/issues"
   },
-  "homepage": "https://github.com/wazybr/w-server#readme"
+  "homepage": "https://github.com/wazybr/wserver#readme"
 }
