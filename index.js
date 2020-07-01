@@ -36,4 +36,14 @@ for (let domain of domains) {
 https.createServer({
     key: fs.readFileSync(process.env.SSL_KEY),
     cert: fs.readFileSync(process.env.SSL_CERT)
-}, app).listen(process.env.PORT, () => console.log("Listening."));
+}, app).listen(process.env.PORT || 443, () => console.log("Listening."));
+
+if (process.env.REDIRECT_HTTP == "true") {
+    const http = express();
+
+    http.get("*", (req, res) => {
+        res.redirect("https://" + req.headers.host + req.url);
+    });
+
+    http.listen(process.env.HTTP_PORT || 80);
+}
